@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Simulated Dialog Demo (ES6)</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="centered-content">
+        <h1>
+          Simulated Dialog Demo<br>
+          <small>ES6</small>
+        </h1>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="centered-content">
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et nulla scelerisque, lacinia nulla non, tincidunt odio. Mauris orci mi, dignissim a ex nec, lobortis commodo sapien. Donec pharetra vehicula odio, ac feugiat erat ullamcorper vitae. Maecenas ex ipsum, vestibulum eu mollis a, venenatis pretium turpis. Vestibulum nec tristique dui, quis fringilla lorem. Maecenas suscipit euismod quam, eu congue sapien fringilla nec. Nullam sed faucibus libero. Sed aliquet, ligula ut dictum rhoncus, elit massa placerat diam, a sodales lacus lacus quis lorem. Nam feugiat mi eleifend sapien ullamcorper, a porttitor dolor varius. Fusce suscipit risus sem, sed pretium quam ultricies et.</p>
+        <p>Aliquam posuere ante nec arcu dignissim fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ut vehicula lorem. In eu auctor ligula. Quisque vitae elementum est. Proin id venenatis ipsum. Etiam sit amet dolor urna. Etiam a varius tortor. Fusce aliquam, mi a malesuada pulvinar, mauris purus dignissim dui, in malesuada mauris velit gravida.</p>
+        <p>Nulla nec erat finibus, suscipit orci nec, varius nisi. Cras neque augue, egestas a auctor luctus, fermentum a nisl. Aenean rhoncus quis massa ac convallis. Quisque sed enim sed velit sodales pulvinar. Integer non elementum erat. Aenean vehicula, neque ut efficitur vulputate, lorem eros condimentum purus, nec fringilla quam orci sodales eros. Sed vehicula tellus vitae pulvinar imperdiet.</p>
+        <button
+          id="showModalButton"
+          class="btn-primary"
+          type="button"
+          aria-label="Opens a simulated dialog"
+        >Show Modal</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="centered-content">
+        <h1>
+          Simulated Dialog Demo<br>
+          <small>ES6</small>
+        </h1>
+        <h2>References</h2>
+        <ul>
+          <li>
+            <a href="https://allyjs.io/tutorials/accessible-dialog.html">ally.js - Accessible dialog tutorial</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role">MDN - Using the dialog role</a>
+          </li>
+          <li>
+            <a href="https://www.udacity.com/course/web-accessibility--ud891">Udacity - Web Accessibility by Google</a>
+          </li>
+          <li>
+            <a href="https://www.webaccessibility.com/best_practices.php?technology_platform_id=47">Web Accessibility - Dialogs Best Practices</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden">W3C - aria-hidden</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-label">W3C - aria-label</a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">W3C - aria-labelledby</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <div id="veil" class="veil hidden"></div>
+
+    <div
+      id="modal"
+      class="modal hidden"
+      role="dialog"
+      tabindex="-1"
+      aria-hidden="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDesc"
+    >
+      <div class="modal-section dark">
+        <div id="modalTitle" class="modal-title">Modal Header</div>
+      </div>
+      <div class="modal-section light">
+        <p id="modalDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex ipsum, vestibulum eu mollis a, venenatis pretium.</p>
+      </div>
+      <div class="modal-section light">
+        <button
+          id="modalCancelButton"
+          type="button"
+          class="btn-primary"
+        >Cancel</button>
+        <button
+          id="modalAcceptButton"
+          type="button"
+          class="btn-primary"
+        >OK</button>
+      </div>
+      <button
+        id="modalCloseButton"
+        class="modal-close-btn btn-primary"
+        type="button"
+        aria-label="Close modal"
+      >&times;</button>
+    </div>
+
+    <script src="index.min.js"></script>
+  </body>
+</html>
