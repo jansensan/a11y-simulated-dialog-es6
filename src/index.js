@@ -39,6 +39,7 @@ class IndexPage {
     ModalModel.requestDismissal();
     VeilModel.requestDismissal();
 
+    // return focus
     ModalModel.triggerElement.focus();
   }
 
