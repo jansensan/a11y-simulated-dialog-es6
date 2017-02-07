@@ -54,3 +54,19 @@ a {
     background-color: $darkGray;
   }
 }
+
+.btn-inline {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 12pt;
+  color: $brightColor;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    text-decoration: none;
+  }
+}

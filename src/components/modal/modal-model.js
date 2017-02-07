@@ -3,6 +3,7 @@ import signals from 'signals';
 let ModalModel = {
   // properties
   isVisible: false,
+  triggerElement: null,
 
   // signals
   // (should be used as read-only)

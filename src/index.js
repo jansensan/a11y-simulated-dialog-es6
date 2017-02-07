@@ -9,20 +9,27 @@ require('./styles/main.scss');
 class IndexPage {
   constructor() {
     // dom elements
+    this.inlineModalButton = document.getElementById('showModalInlineButton');
     this.modalButton = document.getElementById('showModalButton');
 
     // event/signals handlers
-    this.modalButton.addEventListener('click', this.onButtonClicked);
+    this.inlineModalButton.addEventListener('click', this.onInlineButtonClicked.bind(this));
+    this.modalButton.addEventListener('click', this.onButtonClicked.bind(this));
     ModalModel.dismissalRequested.add(this.onDismissalRequested, this);
     VeilModel.dismissalRequested.add(this.onDismissalRequested, this);
   }
 
-  onButtonClicked() {
+  displayModal() {
     // add class to prevent scrolling
     document.body.classList.add('has-veil');
 
     VeilModel.requestDisplay();
     ModalModel.requestDisplay();
+  }
+
+  onButtonClicked() {
+    ModalModel.triggerElement = this.modalButton;
+    this.displayModal();
   }
 
   onDismissalRequested() {
@@ -32,7 +39,12 @@ class IndexPage {
     ModalModel.requestDismissal();
     VeilModel.requestDismissal();
 
-    this.modalButton.focus();
+    ModalModel.triggerElement.focus();
+  }
+
+  onInlineButtonClicked() {
+    ModalModel.triggerElement = this.inlineModalButton;
+    this.displayModal();
   }
 }
 
