@@ -33,7 +33,7 @@ Then open a browser at [http://localhost:8080/](http://localhost:8080/) to view 
 
 - [Vanilla JS Demo](https://github.com/jansensan/a11y-simulated-dialog-vanilla-js)
 - [ES6 Demo](https://github.com/jansensan/a11y-simulated-dialog-es6)
-- [Slides]("https://github.com/jansensan/a11y-simulated-dialog-slides)
+- [Slides](https://github.com/jansensan/a11y-simulated-dialog-slides)
 
 
 ## References
