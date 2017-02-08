@@ -1,16 +1,31 @@
 # Simulated Dialog Demo (ES6)
 
-Demo of an accessible simulated dialog (modal).
+Demo of an accessible simulated dialog (modal) in ES6.
 
 
 ## How to use
 
+### Screen Readers
+
+Some parts of the project require the use of a [screen reader](https://en.wikipedia.org/wiki/Screen_reader). The subject of screen readers is broader than this project intends to approach, so you will have to research and read about that subject on your own.
+
+In the meantime, here are a few links to some screen readers.
+
+- [NVDA](https://www.nvaccess.org/): Windows only. Free: open source.
+- [Jaws](http://www.freedomscientific.com/Products/Blindness/JAWS): Windows only. Expensive: ranging from ~$180 (90 day license) to ~$1100 (pro version).
+- [VoiceOver](http://www.apple.com/ca/accessibility/mac/vision/): macOS and iOS only. Free: built into the OS.
+
+
+This project is tested with NVDA on a Windows 10 environment.
+
+
 ### Requirements
 
-Ensure you install these globally:
+Ensure you install these modules globally:
 
 - [Node](https://nodejs.org/)
 - [Webpack](https://webpack.js.org/)
+- [Webpack Dev Server](https://webpack.github.io/docs/webpack-dev-server.html)
 
 
 ### Installation
@@ -22,26 +37,12 @@ Once you checked out this project, run this command in a Terminal window:
 
 ### Testing locally
 
-Run this command in a Terminal window:
-
-    webpack-dev-server
-
-Then open a browser at [http://localhost:8080/](http://localhost:8080/) to view the project.
+0. Run this command in a Terminal window: `webpack-dev-server`
+0. Open a browser at [http://localhost:8080/](http://localhost:8080/) to view the project.
 
 
-## Sources
+## Presentation Slides
 
-- [Vanilla JS Demo](https://github.com/jansensan/a11y-simulated-dialog-vanilla-js)
-- [ES6 Demo](https://github.com/jansensan/a11y-simulated-dialog-es6)
-- [Slides](https://github.com/jansensan/a11y-simulated-dialog-slides)
+See the presentation slides at [slides.jansensan.net/a11y-simulated-dialog](http://slides.jansensan.net/a11y-simulated-dialog).
 
-
-## References
-
-- [ally.js - Accessible dialog tutorial](https://allyjs.io/tutorials/accessible-dialog.html)
-- [MDN - Using the `dialog` role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role)
-- [Udacity - Web Accessibility by Google](https://www.udacity.com/course/web-accessibility--ud891)
-- [Web Accessibility - Dialogs Best Practices](https://www.webaccessibility.com/best_practices.php?technology_platform_id=47)
-- [W3C - `aria-hidden`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden)
-- [W3C - `aria-label`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)
-- [W3C - `aria-labelledby`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
+All material referenced in this project is kept up to date in the README of the slides repository.

@@ -1,10 +1,9 @@
 {
   "name": "a11y-simulated-dialog-es6",
   "version": "1.0.0",
-  "description": "Demo of an accessible simulated dialog (modal).",
+  "description": "Demo of an accessible simulated dialog (modal) in ES6.",
   "author": "Mat Janson Blanchet <mat.jb@jansensan.net> (http://jansensan.net)",
   "license": "UNLICENSED",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://jansensan@github.com/jansensan/a11y-simulated-dialog-es6.git"
