@@ -70,3 +70,7 @@ a {
     text-decoration: none;
   }
 }
+
+:focus {
+  outline: 2px solid $brightColor;
+}
