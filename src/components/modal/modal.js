@@ -6,12 +6,17 @@ class Modal {
   constructor() {
     // dom elements
     this.element = document.getElementById('modal');
-    this.firstElement = document.getElementById('modalCancelButton');
-    this.lastElement = document.getElementById('modalCloseButton');
+    this.cancelButton = document.getElementById('modalCancelButton');
+    this.acceptButton = document.getElementById('modalAcceptButton');
+    this.closeButton = document.getElementById('modalCloseButton');
+
+    this.firstElement = this.acceptButton;
+    this.lastElement = this.closeButton;
+
     this.activeElement = null;
 
     // event/signals handlers
-    this.lastElement.addEventListener('click', this.onCloseButtonClicked.bind(this));
+    this.closeButton.addEventListener('click', this.onCloseButtonClicked.bind(this));
     document.addEventListener('keydown', this.onKeyPressed.bind(this));
     ModalModel.dismissalRequested.add(this.onDismissalRequested, this);
     ModalModel.displayRequested.add(this.onDisplayRequested, this);
@@ -66,8 +71,8 @@ class Modal {
         event.preventDefault();
         event.stopPropagation();
         this.element.focus();
-
-      } else if (this.activeElement === this.element) {
+      }
+      if (this.activeElement === this.element) {
         event.preventDefault();
         event.stopPropagation();
         this.lastElement.focus();
